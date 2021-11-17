@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="VikingsInterview.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VikingsInterview"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" d:DesignHeight="1146.226" d:DesignWidth="1599.057"
+    xmlns:controls="using:Microsoft.UI.Xaml.Controls">
+    
+    <Grid Margin="0,0,10,0">
+        <RelativePanel>
+            <StackPanel x:Name="Info" Margin="20">
+                <TextBlock Text="Player Name"></TextBlock>
+                <TextBox  Name="Name" Width="200"></TextBox>
+
+                <TextBlock Text="Pass Attempts"></TextBlock>
+                <muxc:NumberBox Name="PA" Minimum="1"></muxc:NumberBox>
+
+                <TextBlock Text="Pass Completions"></TextBlock>
+                <muxc:NumberBox Name="PC"></muxc:NumberBox>
+
+                <TextBlock  Text="Passing Yards"></TextBlock>
+                <muxc:NumberBox Name="Yards"></muxc:NumberBox>
+
+                <TextBlock Text="Passing Touchdowns"></TextBlock>
+                <muxc:NumberBox Name="Touchdowns"></muxc:NumberBox>
+
+                <TextBlock Text="Interceptions"></TextBlock>
+                <muxc:NumberBox Name="Interceptions"></muxc:NumberBox>
+
+                <Button Name="Calculate" Click="OnClick" Content="Calculate QB Rating"></Button>
+
+            </StackPanel>
+
+            <StackPanel Margin="20" RelativePanel.RightOf="Info">
+                <TextBlock Name="Results"></TextBlock>
+            </StackPanel>
+
+        </RelativePanel>
+    </Grid>
+</Page>
